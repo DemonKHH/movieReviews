@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "skeleton-cinema": "/components/cinema/cinema"
+  }
+}

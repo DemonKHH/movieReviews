@@ -1,0 +1,6 @@
+<!--<canvas canvas-id="skeleton" disable-scroll="true"></canvas>-->
+<view style="width: {{systemInfo.width}}px; height: {{systemInfo.height}}px; background-color: {{bgcolor}}; position: absolute; left:0; top:{{navbarHeight+10}}px; z-index:9998; overflow: hidden;">
+    <view class="spinbox" wx:if="{{loading == 'spin'}}">
+        <view class="spin"></view>
+    </view>
+</view>

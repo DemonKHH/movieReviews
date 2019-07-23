@@ -1,0 +1,19 @@
+<navbar text="详情" backicon="true"></navbar>
+<loading loading="spin" bgcolor="#fff" wx:if="{{skeleton}}"></loading>
+<view class="container">
+  <block>
+    <view class="flex item">
+      <view class="item_left">
+        <image src="{{filmData.images.small}}" />
+      </view>
+      <view class="flex_auto item_middle">
+        <view>
+          <text class="title">{{filmData.title}}</text>
+        </view>
+        <view>
+          <text   wx:for="{{tags}}"  wx:key="" class="action">{{item}}</text>
+        </view>
+      </view>
+    </view>
+    </block>
+</view>

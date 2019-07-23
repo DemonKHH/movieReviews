@@ -1,0 +1,47 @@
+.navbar {
+  width: 100%;
+  background-color: #1797eb;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+.back{
+  margin:10px 0 0 10px;
+  height:26px;
+  width:26px;
+}
+.back image{
+  height:100%;
+  width:100%;
+  color:#fff;
+}
+.search {
+  position: absolute;
+  top:32px;
+  height:22px;
+  width:100%;
+  display: flex;
+}
+.search input{
+  background: #fff;
+  margin:0 auto;
+  border-radius: 15px;
+  height:100%;
+  width:30%;
+  text-indent: 5px;
+}
+.title-container {
+  height: 40px;
+  display: flex;
+  margin-top:20px;
+  position: relative;
+}
+.title {
+  color: #fff;
+  margin:10px 0 0 10px;
+  font-size: 18px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

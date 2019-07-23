@@ -1,0 +1,14 @@
+<view class="navbar" style="{{'height: ' + navigationBarHeight}}">
+  <view style="{{'height: ' + statusBarHeight}}">
+    <view class='title-container'>
+      <view class='back' wx:if="{{backicon}}" bindtap="back">
+       <image src="{{backImg}}"></image>
+      </view>
+      <view class='title'>{{text}}</view>
+    </view>
+    <view class="search" wx:if="{{search}}">
+      <input placeholder="🔍 搜索" bindtap="toSearchPage"></input>
+    </view>
+  </view>
+</view>
+<view style="{{'height: ' + navigationBarHeight}};background: white;"></view>

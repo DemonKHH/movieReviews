@@ -1,0 +1,81 @@
+<navbar text="微票" search="true"></navbar>
+<skeleton selector="skeleton" loading="spin" bgcolor="#fff" wx:if="{{showSkeleton}}"></skeleton>
+<view class="container skeleton">
+  <view class="address" bindtap="getPermission">
+    <text class="skeleton-radius">当前位置:{{address}}</text>
+  </view>
+  <view class="skeleton-radius">
+    <swiper class="swiper_box" indicator-dots="{{indicatorDots}}" vertical="{{vertical}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" bindchange="swiperchange">
+      <block wx:for-items="{{items_iscoming}}" wx:key="">
+        <swiper-item>
+          <image src="{{item.images.small}}" class="slide-image" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class="text">
+    <view class="skeleton-radius textChid">
+      <view class="line_flag"></view>
+      <text>正在上映</text>
+    </view>
+  </view>
+  <block wx:for-items="{{items_iscoming}}" wx:key="">
+    <view class="flex item">
+      <view class="item_left" bindtap="getDetails" data-id="{{item.id}}">
+        <image class="skeleton-radius" src="{{item.images.small}}" />
+      </view>
+      <view class="flex_auto item_middle">
+        <view>
+          <text class="title skeleton-radius">{{item.title}}</text>
+        </view>
+        <view>
+          <text class="actor skeleton-radius">导演:{{item.directors[0].name}} {{item.directors[1].name}}</text>
+        </view>
+        <view>
+          <text  v-for="{{item.casts}}" class="sub_title skeleton-radius">主演:{{item.casts[0].name}} {{item.casts[1].name}} </text>
+        </view>
+      </view>
+      <view class="item_right">
+        <view>
+          <text class="score skeleton-radius">{{item.rating.average}}</text>
+        </view>
+        <view>
+          <text class="action skeleton-radius">{{item.genres}}</text>
+        </view>
+      </view>
+    </view>
+  </block>
+  <view class="text">
+    <view class="skeleton-radius textChid">
+      <view class="line_flag"></view>
+      <text>即将上映</text>
+    </view>
+  </view>
+
+  <block wx:for-items="{{items_upcoming}}" wx:key="">
+    <view class="flex item">
+      <view class="item_left">
+        <image src="{{item.images.small}}" />
+      </view>
+      <view class="flex_auto item_middle">
+        <view>
+          <text class="title">{{item.title}}</text>
+        </view>
+        <view>
+          <text class="actor">导演:{{item.directors[0].name}} {{item.directors[1].name}}</text>
+        </view>
+        <view>
+          <text class="sub_title">主演:{{item.casts[0].name}} {{item.casts[1].name}} </text>
+        </view>
+      </view>
+      <view class="item_right">
+        <view>
+          <text class="score">{{item.title}}</text>
+        </view>
+        <view>
+          <text class="action">{{item.genres}}</text>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>

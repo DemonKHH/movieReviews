@@ -1,0 +1,6 @@
+<view style="width: {{systemInfo.width}}px; height: {{systemInfo.height}}px; background-color: {{bgcolor}}; position: absolute; left:0; top:0; z-index:9998; overflow: hidden;" class="container skeleton">
+  <block wx:for-items="{{loadingArrs}}" wx:key="">
+    <view class="cinemaBox">
+    </view>
+  </block>
+</view>

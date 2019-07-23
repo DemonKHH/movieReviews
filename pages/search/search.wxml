@@ -1,0 +1,18 @@
+<navbar text="微票"  backicon="true"></navbar>
+<view class="container">
+  <view>
+    <input type="search" placeholder="搜索" bindconfirm="startSearch"></input>
+  </view>
+  <loading loading="spin" bgcolor="#fff" wx:if="{{skeleton}}"></loading>
+  <block wx:for-items="{{items}}" wx:key="">
+    <view class="flex item">
+      <view class="flex_auto item_left">
+        <view><text class="title">{{item.title}}</text></view>
+        <view><text class="tag">{{item.genres}}</text></view>
+      </view>
+      <view class="item_right">
+        <view><text class="price">{{item.year}}</text></view>
+      </view>
+    </view>
+  </block>
+</view>

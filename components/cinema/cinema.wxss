@@ -1,0 +1,17 @@
+.container {
+  height:100%;
+  width:80%;
+  display: flex;
+  flex-direction: column;
+   align-items: center;
+}
+.cinemaBox{
+  height:100px;
+  padding: 10px;
+  margin:5px 0 10px 0;
+  width:90%;
+  border-radius: 15px;
+  background: rgb(194, 207, 214);
+}
+
+
