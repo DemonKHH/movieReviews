@@ -9,7 +9,8 @@
   ],
   "usingComponents": {
       "navbar": "/components/navbar/navbar",
-      "loading": "/components/loading/loading"
+      "loading": "/components/loading/loading",
+      "upPullLoading":"/components/upPullLoading/upPullLoading"
   },
   "window": {
    "navigationStyle": "custom",

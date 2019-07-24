@@ -5,18 +5,16 @@ Component({
       type: String,
       value: '#FFF'
     },
-    selector: {
-      type: String,
-      value: 'skeleton'
-    },
     loading: {
       type: String,
       value: 'spin'
     }
   },
   data: {
-    loadingArrs: ['1', '1', '1', '1','1','1','1'],
+    loadingAni: ['spin', 'chiaroscuro'],
     systemInfo: {},
+    skeletonRectLists: [],
+    skeletonCircleLists: [],
     navbarHeight: 0
   },
   attached: function() {
@@ -27,12 +25,8 @@ Component({
         width: systemInfo.windowWidth,
         height: systemInfo.windowHeight
       },
-      navbarHeight: app.globalData.statusBarHeight
+      navbarHeight: app.globalData.statusBarHeight,
+      loading: this.data.loadingAni.includes(this.data.loading) ? this.data.loading : 'spin'
     })
-  },
-  ready: function() {
-    const that = this;
-    //绘制背景
   }
-
 })

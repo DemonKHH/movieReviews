@@ -11,9 +11,40 @@
           <text class="title">{{filmData.title}}</text>
         </view>
         <view>
-          <text   wx:for="{{tags}}"  wx:key="" class="action">{{item}}</text>
+          <text wx:for="{{tags}}" wx:key="" class="action">{{item}}</text>
         </view>
       </view>
     </view>
-    </block>
+  </block>
+  <block>
+    <view class="movieSummary">
+      <text>简介</text>
+      <view class="summaryContent {{allSummary?'text-show':'text-hidden'}}">
+        <text>{{filmData.summary}}</text>
+      </view>
+      <view class="textSpread" bindtap="showAllText">
+        <text>{{textControl?'收起':'展开'}}</text>
+      </view>
+    </view>
+  </block>
+  <block>
+    <view>
+      <view class="actorTitle">
+        <text>影人</text>
+      </view>
+      <view class="actorBox">
+        <view class="movieAcotors" wx:for="{{filmData.casts}}" wx:key="">
+          <view class="actorImg">
+            <image src="{{item.avatars.small}}"></image>
+          </view>
+          <view class="actorName">
+            <text>{{item.name}}</text>
+          </view>
+          <view class="actorWork">
+            <text>{{item.name_en}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
 </view>

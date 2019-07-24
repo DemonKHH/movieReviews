@@ -78,4 +78,5 @@
       </view>
     </view>
   </block>
+  <upPullLoading loading="spin" bgcolor="#fff" wx:if="{{upPullLoading}}" msg="{msg}}"></upPullLoading>
 </view>

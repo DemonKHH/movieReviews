@@ -74,11 +74,15 @@ view.text text {
     flex: 1;
     margin-left: 10px;
     padding-top: 5px;
-    max-width:180px;
-    overflow: hidden;
+    max-width:120px;
+
 
 }
-
+.item_middle view{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
 .item_middle .title {
     font-size: 16px;
     color: #333;
@@ -95,14 +99,16 @@ view.text text {
     color: #666;
     margin: 2px 0px;
 }
+
 .item_right{
-    max-width:100px;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content:right;
+    vertical-align: center;
+    align-items: right;
     margin-left:4px;
 }
+
 .item_right .score {
     font-size: 14px;
     color: #cf616a;

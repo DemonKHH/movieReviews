@@ -5,7 +5,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-    skeleton: true
+    skeleton: true,
+    allSummary:false,
+    textControl:false
   },
 
   /**
@@ -14,7 +16,8 @@ Page({
   onLoad: function(options) {
     var that = this;
     that.data.skeleton =true
-    that.data.id = wx.getStorageSync('id')
+    that.data.id = wx.getStorageSync('id'),
+    console.log(that.data.id);
     wx.request({
         url: 'https://douban-api.uieee.com/v2/movie/subject/'+that.data.id,
         method: 'GET',
@@ -66,18 +69,10 @@ Page({
   onPullDownRefresh: function() {
 
   },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function() {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function() {
-
+  showAllText: function () {
+      this.setData({
+        allSummary:!this.data.allSummary,
+        textControl:!this.data.textControl
+      })
   }
 })
