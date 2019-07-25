@@ -7,7 +7,8 @@ Page({
   data: {
     skeleton: true,
     allSummary:false,
-    textControl:false
+    textControl:false,
+    allComments:false
   },
 
   /**
@@ -70,9 +71,16 @@ Page({
 
   },
   showAllText: function () {
-      this.setData({
-        allSummary:!this.data.allSummary,
-        textControl:!this.data.textControl
+      var that = this
+      that.setData({
+        allSummary:!that.data.allSummary,
+        textControl:!that.data.textControl
       })
-  }
+  },
+  controlCommentsShow: function (){
+    var that = this;
+    that.setData({
+      allComments:!that.data.allComments
+    })
+  } 
 })
