@@ -6,3 +6,7 @@
 <div>
     <img src='https://img01.sogoucdn.com/app/a/100520146/629b13cfb0dc1e2e2a5c45ba472b7cab'/>
 </div>
+#### 详情页面大概(还在慢慢更新)
+<div>
+     <img src='https://img02.sogoucdn.com/app/a/100520146/c2e6231c6f2a44307f2f9c7baafcc3e8'/>
+<div>
