@@ -85,6 +85,9 @@
             </view>
           </view>
         </view>
+        <view>
+          <view bindtap="moreComments">查看全部短评</view>
+        </view>
       </view>
     </view>
   </block>

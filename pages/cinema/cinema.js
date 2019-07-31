@@ -50,5 +50,12 @@ Page({
           })
         }
       }) 
-    }
+    },
+  getDetails: function (event) {
+    // console.log(event)
+    wx.setStorageSync('id', event.currentTarget.dataset.id)
+    wx.navigateTo({
+      url: `../../pages/common/common`
+    })
+  }
 })

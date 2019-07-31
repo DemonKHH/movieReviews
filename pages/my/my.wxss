@@ -1,0 +1,25 @@
+/**index.wxss**/
+.container {
+  height: 100%;
+  width:100%;
+  background-color: #F2f2f2;
+}
+.loginBtn {
+  height:100px;
+}
+.loginContentTop{
+  height:100%;
+  width:100%;
+  background:#fff;
+  display: flex;
+  vertical-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.loginContentTop button{
+  height:40%;
+  width:40%;
+  box-sizing: border-box;
+  border-radius:15px;
+  box-shadow: 2px 2px 2px 2px #f0f0f4;
+}

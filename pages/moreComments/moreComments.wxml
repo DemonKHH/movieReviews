@@ -1,0 +1,32 @@
+<navbar text="评论" backicon="true"></navbar>
+<loading loading="spin" bgcolor="#fff" wx:if="{{skeleton}}"></loading>
+<view class="container">
+  <block>
+    <view>
+      <view class="comments">
+        <view class="commentsTitle">
+          <text>短评</text>
+        </view>
+        <view class="commentsContent" wx:for="{{filmData.comments}}" wx:key="">
+          <view class="author">
+            <view class="commentsTop">
+              <view class="authorImg">
+                <image src="{{item.author.avatar}}"></image>
+              </view>
+              <view class="authorName">
+                <text>{{item.author.name}}</text>
+                <text>{{item.created_at}}</text>
+              </view>
+            </view>
+            <view class="commentsBottom {{allComments?'text-show':'text-hidden'}}" bindtap="controlCommentsShow">
+              <view class="authorComments">
+                <text>{{item.content}}</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+  <upPullLoading loading="spin" bgcolor="#f2f2f2" wx:if="{{upPullLoading}}" msg="{msg}}"></upPullLoading>
+</view>

@@ -54,7 +54,7 @@
 
   <block wx:for-items="{{items_upcoming}}" wx:key="">
     <view class="flex item">
-      <view class="item_left">
+      <view class="item_left" bindtap="getDetails" data-id="{{item.id}}">
         <image src="{{item.images.small}}" />
       </view>
       <view class="flex_auto item_middle">

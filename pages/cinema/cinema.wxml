@@ -4,7 +4,7 @@
   <block wx:for-items="{{items}}" wx:key="">
     <view class="flex item">
       <view class="flex_auto item_left">
-        <view><text class="title">{{item.title}}</text></view>
+        <view><text class="title" bindtap="getDetails" data-id="{{item.id}}">{{item.title}}</text></view>
         <!-- <view><text class="sub_title">{{item.imgaes.small}}</text></view> -->
         <view><text class="tag">{{item.genres}}</text></view>
       </view>

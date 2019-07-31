@@ -1,0 +1,12 @@
+<navbar text="个人中心" ></navbar>
+<view class="container">
+  <!-- 需要使用 button 来授权登录 -->
+  <view class="loginBtn">
+      <view class="loginContentTop">
+         <button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">登录</button>
+         <view wx:else>请升级微信版本</view>
+      </view>
+  </view>
+
+
+</view>

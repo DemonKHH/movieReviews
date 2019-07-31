@@ -1,4 +1,4 @@
-<view class="navbar" style="{{'height: ' + navigationBarHeight}}">
+<view class="navbar" style="{{'height: ' + navigationBarHeight}};" >
   <view style="{{'height: ' + statusBarHeight}}">
     <view class='title-container'>
       <view class='back' wx:if="{{backicon}}" bindtap="back">

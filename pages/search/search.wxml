@@ -4,7 +4,7 @@
     <input type="search" placeholder="搜索" bindconfirm="startSearch"></input>
   </view>
   <loading loading="spin" bgcolor="#fff" wx:if="{{skeleton}}"></loading>
-  <block wx:for-items="{{items}}" wx:key="">
+  <block wx:for-items="{{items}}" wx:key="" wx:if="{{searchSuccess}}">
     <view class="flex item">
       <view class="flex_auto item_left">
         <view><text class="title">{{item.title}}</text></view>

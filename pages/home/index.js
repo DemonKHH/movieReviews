@@ -9,7 +9,8 @@ Page({
     showSkeleton: true,
     address:'请选择',
     upPullLoading:false,
-    count:20
+    count:20,
+    timer:null
   },
   swiperchange: function (e) {
 
@@ -27,11 +28,6 @@ Page({
   },
   onShow(){
   //  console.log('page show')
-  },
-  go: function (event) {
-    wx.navigateTo({
-      url: '../list/index?type=' + event.currentTarget.dataset.type
-    })
   },
   getDetails: function (event) {
     // console.log(event)
@@ -104,35 +100,36 @@ Page({
       }
     })
   },
-  onPullDownRefresh: function () {
-    var that = this;
-    that.reqIndex();
-  },
   onReachBottom:function (){
     var that  = this;
-    that.setData({
-      upPullLoading: true,
-      count:this.data.count+20,
-    })
-    wx.request({
-      url: 'https://douban-api.uieee.com/v2/movie/coming_soon?count=' + this.data.count,
-      method: 'GET',
-      header: {
-        "Content-Type": "application/text"
-      },
-      success: function (res) {
-        that.setData({
-          items_upcoming: res.data.subjects,
-          upPullLoading: false
-        })
-      },
-      fail: function (err) {
-        that.setData({
-          upPullLoading: false
-        }),
-          that.modalcnt();
-      }
-    })
+    if(that.data.timer){
+      clearTimeout(that.data.timer)
+    }
+    that.data.timer = setTimeout(()=>{
+      that.setData({
+        upPullLoading: true,
+        count: this.data.count + 20,
+      })
+      wx.request({
+        url: 'https://douban-api.uieee.com/v2/movie/coming_soon?count=' + this.data.count,
+        method: 'GET',
+        header: {
+          "Content-Type": "application/text"
+        },
+        success: function (res) {
+          that.setData({
+            items_upcoming: res.data.subjects,
+            upPullLoading: false
+          })
+        },
+        fail: function (err) {
+          that.setData({
+            upPullLoading: false
+          }),
+            that.modalcnt();
+        }
+      })
+    },1000)
   }
 })
 
