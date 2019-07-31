@@ -4,5 +4,5 @@
 #### 图片加载可能会较慢，没办法压缩太小了github上gif动画会丢失（城市定位可切换github上没显示出来）
 ##### 搜索接口有问题，影院没有只能用top榜代替一哈（找到适合的接口我会更新，接口太难找了，有大佬有接口给我用用嘛）
 ##### github上传的gif图我简直吐了，不完整
-！[gif效果](https://img.umcoder.com/imgs/2019/07/802021e2f40995e0.gif)
+[gif效果图](https://img.umcoder.com/imgs/2019/07/802021e2f40995e0.gif)
 
